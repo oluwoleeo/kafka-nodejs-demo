@@ -37,10 +37,8 @@ const run = async () => {
     age: 33
   };
 
-  const id = await registry.getRegistryId("test_topicPersonRecord", 3);
-  console.log(`Id is ${id}`); 
-
-  const encodedPerson = await registry.encode(process.env.SCHEMA_ID, personToEncode);
+  const schemaId = await registry.getLatestSchemaId(process.env.SCHEMA_SUBJECT);
+  const encodedPerson = await registry.encode(schemaId, personToEncode);
 
   const messages = [
     {value: encodedPerson}
