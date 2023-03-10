@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-kafka-demo",
+  "version": "1.0.0",
+  "description": "A simple app to produce and consume Kafka events",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "kafka",
+    "topics",
+    "cluster",
+    "broker",
+    "events"
+  ],
+  "author": "Oluwaremi Oluwole",
+  "license": "ISC",
+  "dependencies": {
+    "@kafkajs/confluent-schema-registry": "^3.3.0",
+    "avsc": "^5.7.7",
+    "dotenv": "^16.0.3",
+    "kafkajs": "^2.2.3"
+  }
+}
